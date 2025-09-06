@@ -8,6 +8,7 @@ import {
 import './App.css'
 import Home from "./Pages/Home/Home";
 import Navbar from "./components/common/Navbar";
+import Registration from "./Pages/Registration/Registration";
 
 const MainLayOut = () => {
   return (
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<MainLayOut />}>
       <Route path="/" element={<Home />} />
+      <Route path="/registration" element={<Registration />} />
     </Route>
   ))
 
