@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
+import { setUser } from '../../slices/userSlice';
 
 const Login = ({ onClose }) => {
+    const dispatch = useDispatch()
     const handleRegistrationClick = () => {
         onClose();
     };
@@ -31,11 +35,22 @@ const Login = ({ onClose }) => {
         axios.post("http://localhost:3000/api/v1/auth/login", formData)
             .then((res) => {
                 toast.success(res.data.message)
+                dispatch(setUser(formData))
             })
             .catch((err) => {
                 toast.error("login failed")
             })
     }
+
+    // all user from backend 
+    const [allUsers, setAllUsers] = useState([])
+    useEffect(() => {
+        axios.get("http://localhost:3000/api/v1/auth/getalluser")
+            .then((res) => {
+                setAllUsers(res.data.data)
+            })
+    }, [])
+    console.log(allUsers)
     return (
         <div className='p-5'>
             <ToastContainer
@@ -51,8 +66,13 @@ const Login = ({ onClose }) => {
                 theme="light"
                 transition={Bounce}
             />
+            <h1 style={{
+                fontFamily: "wagrika"
+            }} className='text-center text-xl'>log In</h1>
+            {/* name */}
+            <input onChange={handleInputChange} type="name" name='name' placeholder='Enter your Full Name' className='py-2 px-[15px] w-full border border-[#000] mt-3' />
             {/* email */}
-            <input onChange={handleInputChange} type="email" name='email' placeholder='Enter your Email ID' className='py-2 px-[15px] w-full border border-[#000]' />
+            <input onChange={handleInputChange} type="email" name='email' placeholder='Enter your Email ID' className='py-2 px-[15px] w-full border border-[#000] mt-3' />
             {/* password */}
             <div className='relative mt-3'>
                 <input onChange={handleInputChange} type={showPassword ? "text" : "password"} name='password' placeholder='Create a Password' className='py-2 px-[15px] w-full border border-[#000]' />
