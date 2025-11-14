@@ -5,18 +5,23 @@ import 'aos/dist/aos.css'
 
 const Banner = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200, once: true }) // duration in ms
-  }, [])
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+            once: false,
+            mirror: false,
+            offset: 120,
+        });
+    }, []);
 
   return (
     <div>
-      <div className='bg-banner bg-cover bg-no-repeat bg-center md:pt-[100px] md:pb-[80px] h-screen flex items-center md:justify-center md:bg-fixed'>
+      <div className='bg-banner bg-cover bg-no-repeat bg-center md:pt-[100px] md:pb-[80px] h-screen flex items-center md:justify-center '>
         <Container>
           <div
             style={{ fontFamily: "wagrika" }}
             className='text-4xl md:text-left text-center'
-            data-aos="fade-right"
-            data-aos-delay="500"
+           data-aos="fade-right"
           >
             <h1
               className='font-semibold'
@@ -36,10 +41,12 @@ const Banner = () => {
           </div>
 
           <div data-aos="fade-right"
-            data-aos-delay="200" className='bg-[#000] text-white py-[10px] w-[120px] text-center mt-[25px] cursor-pointer hover:bg-transparent transition-all duration-500 hover:text-black font-semibold'>
-            <p>Shop Now</p>
+            data-aos-delay="200" >
+            <button className="mt-4 px-6 py-2 font-semibold border border-[#000] text-black hover:bg-[#462700] hover:text-white transition cursor-pointer duration-700">
+              Shop Now
+            </button>
           </div>
-      </Container>
+        </Container>
       </div>
     </div>
   )
