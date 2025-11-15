@@ -5,6 +5,7 @@ import Gallary from '../../components/Gallary/Gallary'
 import ReviewPg from '../../components/ReviewPg'
 import Toptrending from '../../components/Toptrending'
 import Perfection from '../../components/Perfection'
+import Footer from '../../components/Footer'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ReviewPg />
       <Toptrending />
       <Perfection />
+      <Footer />
     </div>
   )
 }
