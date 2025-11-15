@@ -1,9 +1,8 @@
 import React from "react";
-import product1 from "../../assets/jewelleryImgs/product1.jpg";
-import product2 from "../../assets/jewelleryImgs/product1_hov.jpg";
-import Container from "../common/Container";
+import product1 from '../assets/jewelleryImgs/product1.jpg'
+import product2 from "../assets/jewelleryImgs/product1_hov.jpg";
+import Container from "./common/Container";
 
-// Reusable Product Card
 const ProductCard = ({ product }) => {
   return (
     <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] mx-auto">
@@ -50,10 +49,8 @@ const ProductCard = ({ product }) => {
   );
 };
 
-// ----------------------------------
 // Main Component
-// ----------------------------------
-const NewIn = () => {
+const Toptrending = () => {
   const products = [
     {
       front: product1,
@@ -88,7 +85,7 @@ const NewIn = () => {
           style={{ fontFamily: "wagrika" }}
           className="text-3xl sm:text-4xl text-center"
         >
-          New In
+          Top Trending
         </h1>
 
         <div className="flex flex-wrap justify-center gap-5 sm:gap-7 md:gap-10 mt-10">
@@ -101,4 +98,4 @@ const NewIn = () => {
   );
 };
 
-export default NewIn;
+export default Toptrending;
