@@ -1,55 +1,59 @@
-import React, { useEffect } from 'react'
-import Container from '../common/Container'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect } from 'react';
+import Container from '../common/Container';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Banner = () => {
   useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            easing: "ease-in-out",
-            once: false,
-            mirror: false,
-            offset: 120,
-        });
-    }, []);
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: false,
+      mirror: false,
+      offset: 120,
+    });
+  }, []);
 
   return (
-    <div>
-      <div className='bg-banner bg-cover bg-no-repeat bg-center md:pt-[100px] md:pb-[80px] h-screen flex items-center md:justify-center '>
+    <div className="w-full">
+      <div className="bg-banner bg-cover bg-no-repeat bg-center h-screen flex items-center">
         <Container>
+
+          {/* TEXT SECTION */}
           <div
+            className="text-center md:text-left max-w-xl"
             style={{ fontFamily: "wagrika" }}
-            className='text-4xl md:text-left text-center'
-           data-aos="fade-right"
+            data-aos="fade-right"
           >
-            <h1
-              className='font-semibold'
-            >
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
               Luxuriate in the
             </h1>
-            <h1
-            >
+
+            <h1 className="text-4xl md:text-5xl mt-1 leading-tight">
               Allure of Fine Gold
             </h1>
-            <p
-              className='text-[12px] pt-[12px]'
 
-            >
-              Hepls Perfect the appearance of women...
+            <p className="text-sm md:text-base pt-4 text-black/80">
+              Helps perfect the appearance of women with elegance & style.
             </p>
           </div>
 
-          <div data-aos="fade-right"
-            data-aos-delay="200" >
-            <button className="mt-4 px-6 py-2 font-semibold border border-[#000] text-black hover:bg-[#462700] hover:text-white transition cursor-pointer duration-700">
+          {/* BUTTON */}
+          <div
+            className="mt-6 md:mt-8 text-center md:text-left"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <button className="px-7 py-2.5 font-semibold border border-black text-black
+               hover:bg-[#462700] hover:text-white transition duration-700">
               Shop Now
             </button>
           </div>
+
         </Container>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;
