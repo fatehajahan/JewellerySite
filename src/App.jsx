@@ -11,6 +11,7 @@ import Navbar from "./components/common/Navbar";
 import Registration from "./Pages/Registration/Registration";
 import Login from "./Pages/Login/Login";
 import Cart from "./Pages/Cart/Cart";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 
 const MainLayOut = () => {
   return (
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="/registration" element={<Registration />} />
       <Route path="/login" element={<Login />} />
       <Route path="/myCart" element={<Cart />} />
+      <Route path="/product-details" element={<ProductDetails />} />
     </Route>
   ))
 
