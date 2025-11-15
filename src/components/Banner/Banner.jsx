@@ -1,9 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Container from '../common/Container';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// Import multiple background images
+import bg1 from '../../assets/jewelleryImgs/banner1.jpg';
+import bg2 from '../../assets/jewelleryImgs/banner2.jpg';
+import bg3 from '../../assets/jewelleryImgs/banner3.jpg';
+
 const Banner = () => {
+  const backgrounds = [bg1, bg2, bg3]; 
+
+  const [index, setIndex] = useState(0);
+
+  // Auto change
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % backgrounds.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // AOS init
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,10 +34,14 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="w-full">
-      <div className="bg-banner bg-cover bg-no-repeat bg-center h-screen flex items-center">
+    <div className="w-full overflow-x-hidden">
+      <div
+        className="min-h-screen flex items-center bg-cover bg-center bg-no-repeat transition-all duration-1000"
+        style={{
+          backgroundImage: `url(${backgrounds[index]})`,
+        }}
+      >
         <Container>
-
           {/* TEXT SECTION */}
           <div
             className="text-center md:text-left max-w-xl"
@@ -49,7 +72,6 @@ const Banner = () => {
               Shop Now
             </button>
           </div>
-
         </Container>
       </div>
     </div>

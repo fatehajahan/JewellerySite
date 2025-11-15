@@ -2,9 +2,13 @@
 
 
 @theme{
-    --background-image-banner : url('../src/assets/jewelleryImgs/banner.jpg');
+    --background-image-banner : url('../src/assets/jewelleryImgs/banner01.jpg');
     --background-image-shop : url('../src/assets/homepage/shopnow.jpg');
     --background-image-aboutBanner : url('../src/assets/aboutUs/bg-11.jpg');
     --background-image-aboutFixed : url('../src/assets/aboutUs/bg-13.jpg');
     --background-image-perfection : url('../src/assets/aboutUs/perfection.jpg');
+}
+
+html, body {
+  overflow-x: hidden !important;
 }
