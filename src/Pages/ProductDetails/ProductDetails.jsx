@@ -8,6 +8,7 @@ import Container from '../../components/common/Container';
 import { CiClock2 } from 'react-icons/ci';
 import { FaFacebookF, FaPinterest } from 'react-icons/fa';
 import { RiLinkedinFill, RiTwitterXLine } from 'react-icons/ri';
+import ReviewForm from '../../components/ReviewForm';
 
 const ProductDetails = () => {
     const images = [ear1, ear2, ear3, ear4];
@@ -146,6 +147,8 @@ const ProductDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <ReviewForm />
         </Container>
     );
 };
