@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import braceletImg from "../../assets/jewelleryImgs/gallary2.jpg";
-import ringImg from "../../assets/jewelleryImgs/gallary3.jpg";
-import earringImg from "../../assets/jewelleryImgs/gallary4.jpg";
-import heroImg from "../../assets/jewelleryImgs/gallary1.jpg";
+import braceletImg from "../assets/jewelleryImgs/gallary2.jpg";
+import ringImg from "../assets/jewelleryImgs/gallary3.jpg";
+import earringImg from "../assets/jewelleryImgs/gallary4.jpg";
+import heroImg from "../assets/jewelleryImgs/gallary1.jpg";
 
 const Gallary = () => {
   useEffect(() => {

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Container from '../common/Container';
+import Container from './common/Container';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Import multiple background images
-import bg1 from '../../assets/jewelleryImgs/banner1.jpg';
-import bg2 from '../../assets/jewelleryImgs/banner2.jpg';
-import bg3 from '../../assets/jewelleryImgs/banner3.jpg';
+import bg1 from '../assets/jewelleryImgs/banner1.jpg';
+import bg2 from '../assets/jewelleryImgs/banner2.jpg';
+import bg3 from '../assets/jewelleryImgs/banner3.jpg';
 
 const Banner = () => {
   const backgrounds = [bg1, bg2, bg3]; 

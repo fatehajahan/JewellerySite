@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"
-import product1 from "../../assets/jewelleryImgs/product1.jpg";
-import product2 from "../../assets/jewelleryImgs/product1_hov.jpg";
-import Container from "../common/Container";
+import product1 from "../assets/jewelleryImgs/product1.jpg";
+import product2 from "../assets/jewelleryImgs/product1_hov.jpg";
+import Container from "./common/Container";
 
 // Reusable Product Card
 const ProductCard = ({ product }) => {
@@ -50,9 +50,8 @@ const ProductCard = ({ product }) => {
   );
 };
 
-// ----------------------------------
 // Main Component
-// ----------------------------------
+
 const NewIn = () => {
   const products = [
     {
