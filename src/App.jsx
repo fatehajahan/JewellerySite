@@ -14,6 +14,7 @@ import Cart from "./Pages/Cart/Cart";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import ScrollToTop from "./components/common/ScrollToTop";
 import Footer from "./components/Footer";
+import AllProducts from "./Pages/AllProducts";
 
 const MainLayOut = () => {
   return (
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
       <Route path="/login" element={<Login />} />
       <Route path="/myCart" element={<Cart />} />
       <Route path="/product-details" element={<ProductDetails />} />
+      <Route path="/all-products" element={<AllProducts />} />
     </Route>
   ))
 

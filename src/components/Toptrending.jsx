@@ -42,6 +42,8 @@ const ProductCard = ({ product }) => {
       back: product8Hover,
     },
   ];
+
+  console.log(productsData)
   return (
     <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] mx-auto">
       <div className="relative w-full h-[300px] sm:h-[320px] md:h-[350px] mt-[30px] group overflow-hidden cursor-pointer">

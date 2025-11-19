@@ -7,9 +7,10 @@ import 'aos/dist/aos.css';
 import bg1 from '../assets/jewelleryImgs/banner1.jpg';
 import bg2 from '../assets/jewelleryImgs/banner2.jpg';
 import bg3 from '../assets/jewelleryImgs/banner3.jpg';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
-  const backgrounds = [bg1, bg2, bg3]; 
+  const backgrounds = [bg1, bg2, bg3];
 
   const [index, setIndex] = useState(0);
 
@@ -67,9 +68,10 @@ const Banner = () => {
             data-aos="fade-right"
             data-aos-delay="200"
           >
-            <button className="px-7 py-2.5 font-semibold border border-black text-black
-               hover:bg-[#462700] hover:text-white transition duration-700">
-              Shop Now
+            <button className="px-7 py-2.5 font-semibold border border-black text-black hover:bg-[#462700] hover:text-white transition duration-700 cursor-pointer">
+              <Link to="/all-products">
+                Shop Now
+              </Link>
             </button>
           </div>
         </Container>

@@ -1,6 +1,7 @@
 import React from 'react'
 import perfection from '../assets/jewelleryImgs/perfection.jpg'
 import Container from './common/Container'
+import { Link } from 'react-router-dom'
 
 const Perfection = () => {
     return (
@@ -13,7 +14,9 @@ const Perfection = () => {
                         <button
                             className="px-5 py-2 w-full hover:text-white font-semibold text-black bg-transparent border border-[#63512d]  hover:bg-[#63512d] transition duration-500 cursor-pointer"
                         >
-                            Shop Now
+                            <Link to="/all-products">
+                                Shop Now
+                            </Link>
                         </button>
                     </div>
                 </div>

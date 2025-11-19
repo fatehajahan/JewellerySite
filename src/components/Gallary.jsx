@@ -6,6 +6,7 @@ import braceletImg from "../assets/jewelleryImgs/gallary2.jpg";
 import ringImg from "../assets/jewelleryImgs/gallary3.jpg";
 import earringImg from "../assets/jewelleryImgs/gallary4.jpg";
 import heroImg from "../assets/jewelleryImgs/gallary1.jpg";
+import { Link } from "react-router-dom";
 
 const Gallary = () => {
   useEffect(() => {
@@ -37,7 +38,9 @@ const Gallary = () => {
             </h2>
 
             <button className=" cursor-pointer mt-5 px-6 py-2 border border-white text-white font-semibold hover:bg-[#462700] transition duration-500">
-              Shop Now
+              <Link to="/all-products">
+                Shop Now
+              </Link>
             </button>
           </div>
         </div>
