@@ -12,12 +12,16 @@ import Registration from "./Pages/Registration/Registration";
 import Login from "./Pages/Login/Login";
 import Cart from "./Pages/Cart/Cart";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import ScrollToTop from "./components/common/ScrollToTop";
+import Footer from "./components/Footer";
 
 const MainLayOut = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Outlet />
+      <Footer />
     </>
   )
 }

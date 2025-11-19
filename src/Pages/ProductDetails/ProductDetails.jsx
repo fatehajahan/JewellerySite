@@ -9,6 +9,7 @@ import { CiClock2 } from 'react-icons/ci';
 import { FaFacebookF, FaPinterest } from 'react-icons/fa';
 import { RiLinkedinFill, RiTwitterXLine } from 'react-icons/ri';
 import ReviewForm from '../../components/ReviewForm';
+import Products from '../../components/Products';
 
 const ProductDetails = () => {
     const images = [ear1, ear2, ear3, ear4];
@@ -16,7 +17,7 @@ const ProductDetails = () => {
 
     return (
         <Container>
-            <div className="py-[80px] md:py-[130px] grid grid-cols-1 lg:grid-cols-2 gap-[40px]">
+            <div className="py-[120px] md:py-[130px] grid grid-cols-1 lg:grid-cols-2 gap-[40px]">
 
                 {/* --------------------- LEFT IMAGES --------------------- */}
                 <div className="flex flex-col md:flex-row gap-[20px] items-center">
@@ -148,7 +149,13 @@ const ProductDetails = () => {
                 </div>
             </div>
 
-            <ReviewForm />
+            {/* Review Form */}
+            <div className="px-4 md:px-0">
+                <ReviewForm />
+            </div>
+            
+            <Products />
+
         </Container>
     );
 };

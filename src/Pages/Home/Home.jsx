@@ -16,7 +16,6 @@ const Home = () => {
       <ReviewPg />
       <Toptrending />
       <Perfection />
-      <Footer />
     </div>
   )
 }

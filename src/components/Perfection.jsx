@@ -11,7 +11,7 @@ const Perfection = () => {
                         <h2 className='text-[45px] text-center'>Chic Petal Perfection</h2>
                         <p className='md:w-[400px] md:py-[15px] py-[20px] md:text-left text-center'>Jewelry is favored by both men and women because it shows luxury & class; own aesthetic taste, affirming position…</p>
                         <button
-                            className="px-5 py-2 w-[150px] hover:text-white font-semibold text-black bg-transparent border border-[#63512d]  hover:bg-[#63512d] transition duration-500 cursor-pointer"
+                            className="px-5 py-2 w-full hover:text-white font-semibold text-black bg-transparent border border-[#63512d]  hover:bg-[#63512d] transition duration-500 cursor-pointer"
                         >
                             Shop Now
                         </button>

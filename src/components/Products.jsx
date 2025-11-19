@@ -1,56 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom"
-// Product Images
 import product1 from "../assets/jewelleryImgs/product1.jpg";
-import product1Hover from "../assets/jewelleryImgs/product1_hov.jpg";
-import product2 from "../assets/jewelleryImgs/product2.jpg";
-import product2Hover from "../assets/jewelleryImgs/product2_hov.jpg";
-import product3 from "../assets/jewelleryImgs/product3.jpg";
-import product3Hover from "../assets/jewelleryImgs/product3_hov.jpg";
-import product4 from "../assets/jewelleryImgs/product4.jpg";
-import product4Hover from "../assets/jewelleryImgs/product4_hov.jpg";
-
+import product2 from "../assets/jewelleryImgs/product1_hov.jpg";
 import Container from "./common/Container";
 
 // Reusable Product Card
 const ProductCard = ({ product }) => {
-  const productsData = [
-    {
-      id: 1,
-      name: "Royal Diamond Necklace",
-      price: "$120.00",
-      front: product1,
-      back: product1Hover,
-    },
-    {
-      id: 2,
-      name: "Classic Gold Earrings",
-      price: "$85.00",
-      front: product2,
-      back: product2Hover,
-    },
-    {
-      id: 3,
-      name: "Elegant Wedding Ring",
-      price: "$150.00",
-      front: product3,
-      back: product3Hover,
-    },
-    {
-      id: 4,
-      name: "Pearl Bracelet Set",
-      price: "$99.00",
-      front: product4,
-      back: product4Hover,
-    },
-  ];
   return (
-    <Link
-      to="/product-details"
-      className="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] mx-auto"
-    >
+    <Link to="/product-details" className="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] mx-auto">
       <div>
-        {/* Product Image Section */}
         <div className="relative w-full h-[300px] sm:h-[320px] md:h-[350px] mt-[30px] group overflow-hidden cursor-pointer">
 
           {/* Default Image */}
@@ -86,6 +44,7 @@ const ProductCard = ({ product }) => {
           <p className="text-[14.5px] font-semibold">{product.name}</p>
           <p className="text-[14.5px]">{product.price}</p>
         </div>
+
       </div>
     </Link>
   );
@@ -93,29 +52,29 @@ const ProductCard = ({ product }) => {
 
 // Main Component
 
-const NewIn = () => {
+const Products = () => {
   const products = [
     {
       front: product1,
-      back: product1Hover,
+      back: product2,
       name: "Snake Necklace",
       price: "100.00$ - 120.00$",
     },
     {
-      front: product2,
-      back: product2Hover,
+      front: product1,
+      back: product2,
       name: "Diamond Bracelet",
       price: "150.00$ - 180.00$",
     },
     {
-      front: product3,
-      back: product3Hover,
+      front: product1,
+      back: product2,
       name: "Golden Earrings",
       price: "80.00$ - 95.00$",
     },
     {
-      front: product4,
-      back: product4Hover,
+      front: product1,
+      back: product2,
       name: "Classic Ring",
       price: "50.00$ - 70.00$",
     },
@@ -141,4 +100,4 @@ const NewIn = () => {
   );
 };
 
-export default NewIn;
+export default Products;
