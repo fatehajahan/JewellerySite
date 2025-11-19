@@ -1,9 +1,47 @@
 import React from "react";
-import product1 from '../assets/jewelleryImgs/product1.jpg'
-import product2 from "../assets/jewelleryImgs/product1_hov.jpg";
+// Product Images
+import product5 from "../assets/jewelleryImgs/product5.jpg";
+import product5Hover from "../assets/jewelleryImgs/product5_hov.jpg";
+import product6 from "../assets/jewelleryImgs/product6.jpg";
+import product6Hover from "../assets/jewelleryImgs/product6_hov.jpg";
+import product7 from "../assets/jewelleryImgs/product7.jpg";
+import product7Hover from "../assets/jewelleryImgs/product7_hov.jpg";
+import product8 from "../assets/jewelleryImgs/product8.jpg";
+import product8Hover from "../assets/jewelleryImgs/product8_hov.jpg";
+
 import Container from "./common/Container";
 
 const ProductCard = ({ product }) => {
+  const productsData = [
+    {
+      id: 1,
+      name: "Royal Diamond Necklace",
+      price: "$120.00",
+      front: product5,
+      back: product5Hover,
+    },
+    {
+      id: 2,
+      name: "Classic Gold Earrings",
+      price: "$85.00",
+      front: product6,
+      back: product6Hover,
+    },
+    {
+      id: 3,
+      name: "Elegant Wedding Ring",
+      price: "$150.00",
+      front: product7,
+      back: product7Hover,
+    },
+    {
+      id: 4,
+      name: "Pearl Bracelet Set",
+      price: "$99.00",
+      front: product8,
+      back: product8Hover,
+    },
+  ];
   return (
     <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] mx-auto">
       <div className="relative w-full h-[300px] sm:h-[320px] md:h-[350px] mt-[30px] group overflow-hidden cursor-pointer">
@@ -53,26 +91,26 @@ const ProductCard = ({ product }) => {
 const Toptrending = () => {
   const products = [
     {
-      front: product1,
-      back: product2,
+      front: product5,
+      back: product5Hover,
       name: "Snake Necklace",
       price: "100.00$ - 120.00$",
     },
     {
-      front: product1,
-      back: product2,
+      front: product6,
+      back: product6Hover,
       name: "Diamond Bracelet",
       price: "150.00$ - 180.00$",
     },
     {
-      front: product1,
-      back: product2,
+      front: product7,
+      back: product7Hover,
       name: "Golden Earrings",
       price: "80.00$ - 95.00$",
     },
     {
-      front: product1,
-      back: product2,
+      front: product8,
+      back: product8Hover,
       name: "Classic Ring",
       price: "50.00$ - 70.00$",
     },
