@@ -6,7 +6,11 @@ import allBan4 from '../assets/jewelleryImgs/allBan4.jpg';
 import Container from '../components/common/Container';
 
 import { productsData } from '../data';
+import { Link } from 'react-router-dom';
 
+const handleSingleProduct = (id) => {
+  console.log("clicked product :", id)
+}
 const AllProducts = () => {
   return (
     <div>
@@ -86,9 +90,9 @@ const AllProducts = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
               {productsData.map((pro) => (
-                <div>
+                <Link to={`/product-details/${pro.id}`}
+                  key={pro.id} onClick={() => handleClick(pro.id)}>
                   <div
-                    key={pro.id}
                     className="relative w-full h-[260px] sm:h-[300px] md:h-[350px] mt-[10px] group overflow-hidden cursor-pointer rounded-md"
                   >
                     {/* Front Image */}
@@ -131,13 +135,11 @@ const AllProducts = () => {
                       {pro.price}
                     </p>
                   </div>
-
-                </div>
+                </Link>
               ))}
 
             </div>
           </div>
-
         </div>
       </Container>
     </div>
