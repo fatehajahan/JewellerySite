@@ -70,7 +70,7 @@ const Navbar = () => {
                         </Link>
 
                         {/* Desktop Nav */}
-                        <div className="hidden md:flex justify-between items-center gap-x-[70px] ">
+                        <div className="hidden lg:flex justify-between items-center gap-x-[70px] ">
                             {/* Nav Items */}
                             <div className="flex gap-x-[30px] text-[18px]">
                                 {navItems.map((item) => (
@@ -168,7 +168,7 @@ const Navbar = () => {
                         </div>
 
                         {/* Mobile Hamburger */}
-                        <div className="flex md:hidden z-50">
+                        <div className="flex lg:hidden z-50">
                             <button onClick={() => setMenuOpen(!menuOpen)}>
                                 {menuOpen ? (
                                     <RiCloseLine className="text-2xl text-gray-800" />
@@ -179,9 +179,9 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Mobile Menu */}
+                    {/* Mobile + tablet Menu */}
                     <div
-                        className={`md:hidden flex flex-col gap-5 overflow-hidden transform transition-all duration-700 origin-top ${menuOpen
+                        className={`lg:hidden md:flex flex-col gap-5 overflow-hidden transform transition-all duration-700 origin-top ${menuOpen
                                 ? "max-h-[600px] opacity-100 scale-y-100"
                                 : "max-h-0 opacity-0 scale-y-95"
                             }`}

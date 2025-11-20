@@ -15,8 +15,8 @@ const AllProducts = () => {
   return (
     <div>
       {/* Banner Section */}
-      <div className="bg-allProducts bg-cover bg-no-repeat bg-center py-[100px] md:py-[150px] px-4">
-        <h1 className="text-center text-white uppercase text-3xl sm:text-4xl md:text-5xl py-5">
+      <div className="bg-allProducts bg-cover bg-no-repeat bg-center py-[50px] md:py-[150px] px-4">
+        <h1 className="text-center text-white uppercase text-3xl sm:text-4xl md:text-5xl md:py-5 pt-[100px]">
           All Products
         </h1>
 
@@ -29,7 +29,7 @@ const AllProducts = () => {
               <img
                 src={item.img}
                 alt={item.label}
-                className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] object-cover cursor-pointer rounded-full border border-transparent hover:border-white duration-500 p-[5px]"
+                className="md:w-[80px] md:h-[80px] w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] object-cover cursor-pointer rounded-full border border-transparent hover:border-white duration-500 p-[5px]"
               />
               <p className="text-white text-sm sm:text-base mt-1">{item.label}</p>
             </div>
@@ -39,7 +39,7 @@ const AllProducts = () => {
 
       {/* Main Content */}
       <Container>
-        <div className="py-10 flex flex-col md:flex-row gap-10 md:gap-[25px] px-4">
+        <div className="py-10 lg:flex flex-col md:flex-row gap-10 md:gap-[25px] px-4">
 
           {/* Sidebar */}
           <div className="w-full md:w-[25%] lg:w-[20%]">
@@ -86,7 +86,7 @@ const AllProducts = () => {
           </div>
 
           {/* Products Grid */}
-          <div className="w-full md:w-[75%] lg:w-[80%]">
+          <div className="w-full md:w-[63%] lg:w-[80%]">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
               {productsData.map((pro) => (

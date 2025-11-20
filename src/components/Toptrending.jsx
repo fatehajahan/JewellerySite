@@ -10,130 +10,66 @@ import product8 from "../assets/jewelleryImgs/product8.jpg";
 import product8Hover from "../assets/jewelleryImgs/product8_hov.jpg";
 
 import Container from "./common/Container";
+import { productsData } from "../data";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ product }) => {
-  const productsData = [
-    {
-      id: 1,
-      name: "Royal Diamond Necklace",
-      price: "$120.00",
-      front: product5,
-      back: product5Hover,
-    },
-    {
-      id: 2,
-      name: "Classic Gold Earrings",
-      price: "$85.00",
-      front: product6,
-      back: product6Hover,
-    },
-    {
-      id: 3,
-      name: "Elegant Wedding Ring",
-      price: "$150.00",
-      front: product7,
-      back: product7Hover,
-    },
-    {
-      id: 4,
-      name: "Pearl Bracelet Set",
-      price: "$99.00",
-      front: product8,
-      back: product8Hover,
-    },
-  ];
-
-  console.log(productsData)
-  return (
-    <div className="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] mx-auto">
-      <div className="relative w-full h-[300px] sm:h-[320px] md:h-[350px] mt-[30px] group overflow-hidden cursor-pointer">
-
-        {/* Default Image */}
-        <img
-          src={product.front}
-          alt="Front"
-          className="absolute w-full h-full object-cover transition-opacity duration-500 opacity-100 group-hover:opacity-0"
-        />
-
-        {/* Hover Image */}
-        <img
-          src={product.back}
-          alt="Back"
-          className="absolute w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-        />
-
-        {/* Hover Buttons */}
-        <div className="opacity-0 group-hover:opacity-100 transition-all duration-500">
-          <div className="flex justify-between items-center absolute bottom-5 w-full px-5">
-            <p className="bg-white text-black px-3 py-2 rounded-md font-semibold">
-              +
-            </p>
-
-            <div className="bg-white text-black px-3 py-2 rounded-md font-semibold">
-              Add to cart
-            </div>
-
-            <p className="bg-white text-black px-3 py-2 rounded-md font-semibold">
-              -
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Text */}
-      <div className="pt-4 text-center">
-        <p className="text-[14.5px] font-semibold">{product.name}</p>
-        <p className="text-[14.5px]">{product.price}</p>
-      </div>
-    </div>
-  );
-};
-
-// Main Component
 const Toptrending = () => {
-  const products = [
-    {
-      front: product5,
-      back: product5Hover,
-      name: "Snake Necklace",
-      price: "100.00$ - 120.00$",
-    },
-    {
-      front: product6,
-      back: product6Hover,
-      name: "Diamond Bracelet",
-      price: "150.00$ - 180.00$",
-    },
-    {
-      front: product7,
-      back: product7Hover,
-      name: "Golden Earrings",
-      price: "80.00$ - 95.00$",
-    },
-    {
-      front: product8,
-      back: product8Hover,
-      name: "Classic Ring",
-      price: "50.00$ - 70.00$",
-    },
-  ];
 
   return (
     <Container>
-      <div className="py-[80px] md:py-[150px]">
-        <h1
-          style={{ fontFamily: "wagrika" }}
-          className="text-3xl sm:text-4xl text-center"
-        >
-          Top Trending
-        </h1>
-
-        <div className="flex flex-wrap justify-center gap-5 sm:gap-7 md:gap-10 mt-10">
-          {products.map((product, index) => (
-            <ProductCard key={index} product={product} />
-          ))}
-        </div>
-      </div>
+      <div className="w-full py-[100px]">
+              <h2 className="text-4xl text-center pb-[50px]">New-In</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                {productsData.slice(5,8).map((pro) => (
+                  <Link to={`/product-details/${pro.id}`}
+                    key={pro.id} onClick={() => handleClick(pro.id)}>
+                    <div
+                      className="relative w-full h-[260px] sm:h-[300px] md:h-[350px] mt-[10px] group overflow-hidden cursor-pointer rounded-md"
+                    >
+                      {/* Front Image */}
+                      <img
+                        src={pro.front}
+                        alt="Front"
+                        className="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-500 group-hover:opacity-0"
+                      />
+      
+                      {/* Hover Image */}
+                      <img
+                        src={pro.back}
+                        alt="Back"
+                        className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                      />
+      
+                      {/* Hover Buttons */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <div className="flex justify-between items-center absolute bottom-3 sm:bottom-5 w-full px-3 sm:px-5">
+                          <p className="bg-white text-black px-3 py-2 rounded-md font-semibold">+</p>
+      
+                          <div className="bg-white text-black px-3 py-2 rounded-md font-semibold">
+                            Add to cart
+                          </div>
+      
+                          <p className="bg-white text-black px-3 py-2 rounded-md font-semibold">-</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 text-center group">
+                      <p className="text-sm text-gray-500 tracking-wide uppercase">
+                        {pro.category}
+                      </p>
+      
+                      <p className="text-lg font-semibold text-gray-900 mt-1 group-hover:text-[#b88b5a] transition-all duration-300">
+                        {pro.name}
+                      </p>
+      
+                      <p className="text-[17px] font-medium text-[#b88b5a] mt-1">
+                        {pro.price}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
     </Container>
   );
 };
